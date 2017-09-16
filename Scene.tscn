@@ -14,8 +14,6 @@ rings = 4
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
-speed = 10.0
-
 [node name="MeshInstance" type="MeshInstance" parent="."]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56449, -0.00472271, -5.87649 )
