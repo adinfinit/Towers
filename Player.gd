@@ -15,7 +15,7 @@ func _fixed_process(delta):
 		dir += Vector3(1, 0, 0)
 	
 	var t = get_transform()
-	t.origin += dir * delta * speed
+	t.origin += dir.normalized() * delta * speed
 	set_transform(t)
 
 func _ready():
