@@ -1,16 +1,21 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-; 
-; Format: 
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
+config_version=3
 
+scene=false
 
 [application]
 
-
 config/name="towers"
+run/main_scene="res://Scene.tscn"
 config/icon="res://icon.png"
+
+[main]
+
+=false
+
 [rendering]
+
 environment/default_environment="res://default_env.tres"
+
+[scene]
+
+=false

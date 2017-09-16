@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+size = Vector3( 2, 2, 2 )
+subdivide_width = 0
+subdivide_height = 0
+subdivide_depth = 0
+
+[node name="Player" type="KinematicBody"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.001
+script = ExtResource( 1 )
+speed = 10.0
+
+[node name="Mesh" type="MeshInstance" parent="."]
+
+layers = 1
+material_override = null
+cast_shadow = 1
+extra_cull_margin = 0.0
+visible_in_all_rooms = false
+use_in_baked_light = false
+lod_min_distance = 0.0
+lod_min_hysteresis = 0.0
+lod_max_distance = 0.0
+lod_max_hysteresis = 0.0
+mesh = SubResource( 1 )
+skeleton = NodePath("..")
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+
+transform = Transform( 0.999994, -0.00309346, 0.0016979, 0.00299423, 0.998447, 0.0556254, -0.00186734, -0.05562, 0.99845, 0.0360432, 3.13018, 6.97791 )
+projection = 0
+fov = 65.0
+near = 0.1
+far = 100.0
+keep_aspect = 1
+current = false
+cull_mask = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+doppler/tracking = 0
+
+
